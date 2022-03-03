@@ -6,6 +6,11 @@ define('PASS', '');
 define('DBSA', 'banco');
 
 // AUTO LOAD DE CLASSES
+//-- A função __autoload esta OBSOLETO a partir do PHP 7.2.0
+//-- habilitar spl_autoload_register() para versão posterior
+
+//spl_autoload_register('__autoload');
+
 function __autoload($Class){
 	$cDir = 'Class';
     $iDir = null;
@@ -53,7 +58,6 @@ function ADErro($ErrMsg, $ErrNo, $ErrDie = null){
 	    die;
 	endif;
 }
-
 
 // PHPErro :: personaliza o gatilho do PHP
 function PHPErro($ErrNo, $ErrMsg, $ErrFile, $ErrLine){
