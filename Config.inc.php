@@ -9,9 +9,9 @@ define('DBSA', 'banco');
 //-- A função __autoload esta OBSOLETO a partir do PHP 7.2.0
 //-- habilitar spl_autoload_register() para versão posterior
 
-//spl_autoload_register('__autoload');
+//spl_autoload_register('_autoload');
 
-function __autoload($Class){
+function _autoload($Class){
 	$cDir = 'Class';
     $iDir = null;
 
